@@ -11,6 +11,29 @@
 
 function calcular(num1, num2, operador) {
   // TODO: implementar função
+  let resultado
+  if (typeof(num1) !== "number" || typeof(num2) !== "number"){
+    return "Erro: parâmetros inválidos"
+  } else if (num2 === 0 && operador === '/') {
+    return "Erro: divisão por zero"
+  }
+  switch (operador){
+    case '+':
+      resultado = num1 + num2
+      break
+    case '-':
+      resultado = num1 - num2
+      break
+    case '*':
+      resultado = num1 * num2
+      break
+    case '/':
+      resultado = num1 / num2
+      break
+    default:
+      return "Erro: operação inválida"
+  }
+  return resultado
 }
 
 
